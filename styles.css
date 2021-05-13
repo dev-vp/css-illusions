@@ -24,8 +24,14 @@ body {
     border-radius: 50%;
     background-color: lightblue;
     position: absolute;
-    left: -1em;
+    left: -.5em;
     bottom: 1em;
+    background-image: radial-gradient(
+        circle at top,
+        lightblue,
+        /* 70%, */
+        #000,
+    );
 }
 
 .cube {
@@ -41,6 +47,7 @@ body {
     width: 100%;
     height: 100%;
     background: var(--boxColor);
+    box-shadow: 0 0 0.5em #000a inset;
 }
 
 .front {
@@ -71,19 +78,24 @@ body {
     position: absolute;
     width: 2em;
     height: 2em;
-    background: var(--boxColor);
+    bottom: 0;
+    background: #0007;
     transform: translateY(50%) rotateX(90deg);
+    box-shadow: 0 0 0.5em #000;
 }
 
 .floor {
-    width: 5em;
-    height: 5em;
-    background-image: repeating-conic-gradient(
-        from 45deg,
-        #111 0deg 90deg,
-        #222 90deg 180deg
+    width: 15em;
+    height: 15em;
+    background-image: 
+        radial-gradient(#0000, #000),
+
+        repeating-conic-gradient(
+            from 45deg,
+            #111 0deg 90deg,
+            #222 90deg 180deg
         );
-    background-size: 1em 1em;
+    background-size: 100%, 1em 1em;
     position: absolute;
     transform: 
         translate(-50%, -50%)
