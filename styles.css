@@ -29,12 +29,50 @@ body {
 }
 
 .cube {
-    width: 3em;
-    height: 3em;
-    background: var(--boxColor);
+    width: 2em;
+    height: 2em;
     position: absolute;
     top: -1em;
-    left:-1em;
+    left: -1em;
+}
+
+.left, .right, .front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--boxColor);
+}
+
+.front {
+    transform: translateZ(1em)
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(1em);
+}
+
+.left {
+    transform: rotateY(270deg) translateZ(1em);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(1em);
+}
+
+.top {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    background: var(--boxColor);
+    transform: translateY(-50%) rotateX(90deg);
+}
+
+.bottom {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    background: var(--boxColor);
+    transform: translateY(50%) rotateX(90deg);
 }
 
 .floor {
