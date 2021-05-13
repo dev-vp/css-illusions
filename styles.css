@@ -1,6 +1,7 @@
 :root {
     --boxColor: #0ff7;
     --rotateSpeed: 30s;
+    --bounceSpeed: 2s;
 }
 
 body {
@@ -38,7 +39,14 @@ body {
         /* 70%, */
         #000,
     );
-    animation: sceneRotate var(--rotateSpeed) infinite linear reverse;
+    animation: 
+    ballBounce var(--bounceSpeed) infinite ease-out,
+    sceneRotate var(--rotateSpeed) infinite linear reverse;
+}
+
+@keyframes ballBounce {
+    0%, 100% {bottom: 1em}
+    50% {bottom: 3em; animation-timing-function: ease-in;}
 }
 
 .ballShadow {
