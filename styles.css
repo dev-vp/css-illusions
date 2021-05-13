@@ -1,5 +1,6 @@
 :root {
     --boxColor: #0ff7;
+    --rotateSpeed: 30s;
 }
 
 body {
@@ -16,6 +17,11 @@ body {
 .scene {
     position: relative;
     transform-style: preserve-3d;
+    animation: sceneRotate var(--rotateSpeed) infinite linear;
+}
+
+@keyframes sceneRotate {
+    to {transform: rotateY(360deg)}
 }
 
 .ball {
