@@ -60,7 +60,9 @@ body {
 }
 
 @keyframes ballShadow {
-    0%, 100% { transform: scale(1)}
+    /* 0%, 100% { transform: scale(1)}
+    50% {transform: scale(2); opacity: 0.5; animation-timing-function: ease-in;} */
+    0%, 8%, 93.5%, 100% { transform: scale(1)}
     50% {transform: scale(2); opacity: 0.5; animation-timing-function: ease-in;}
 }
 
