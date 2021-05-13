@@ -38,6 +38,7 @@ body {
         /* 70%, */
         #000,
     );
+    animation: sceneRotate var(--rotateSpeed) infinite linear reverse;
 }
 
 .ballShadow {
