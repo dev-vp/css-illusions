@@ -1,5 +1,5 @@
 :root {
-    --boxColor: #0ff7;
+    --boxColor: rgba(182, 13, 255, 0.658);
     --rotateSpeed: 30s;
     --bounceSpeed: 2s;
 }
@@ -16,7 +16,27 @@ body {
     perspective-origin: 50% calc(50% - 2em);
 }
 
-.scene {
+h2 {
+    color: rgba(211, 211, 211, 0.507);
+    position: absolute;
+    top: 0;
+    font-family: 'Snell Roundhand';
+    font-weight: 25;
+    text-shadow: 0px 0px 28px pink;
+    transform: translateZ(-100em);
+    animation: flyCloser 8s infinite linear;
+}
+
+@keyframes flyCloser {
+    0% {opacity: 0; transform: translateZ(-100em)}
+    25% {opacity: .5; transform: translateZ(-75em)}
+    50% {opacity: .8; transform: translateZ(-50em)}
+    80% {opacity: .5; transform: translateZ(-25em)}
+    100% {opacity: 0; transform: translateZ(3em)}
+}
+
+
+.scene-1 {
     position: relative;
     transform-style: preserve-3d;
     animation: sceneRotate var(--rotateSpeed) infinite linear;
@@ -30,13 +50,13 @@ body {
     width: 1em;
     height: 1em;
     border-radius: 50%;
-    background-color: lightblue;
+    background-color: red;
     position: absolute;
     left: -.5em;
     bottom: 1em;
     background-image: radial-gradient(
         circle at top,
-        lightblue,
+        red,
         65%,
         #000
     );
@@ -131,7 +151,7 @@ body {
         repeating-conic-gradient(
             from 45deg,
             #111 0deg 90deg,
-            #222 90deg 180deg
+            rgb(169, 169, 169) 90deg 180deg
         );
     background-size: 100%, 1em 1em;
     position: absolute;
